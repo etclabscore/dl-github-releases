@@ -5,19 +5,20 @@ A node module to download Github assets for github releases. It will also uncomp
 ## Command line
 
 ```bash
-npm install -g @etclabscore/dl-github-release
+$ npm install -g @etclabscore/dl-github-release
 
-dl-github-release --help
+
+$ dl-github-release --help
 
 Usage: download-github-release [options] <user> <repo>
 
 Options:
   -V, --version                      output the version number
-  -o, --outputDir [output]           output directory [output] (default: "/Users/zb/Code/etclabs/dl-github-releases")
+  -o, --outputDir [output]           output directory [output] (default: \"/Users/zb/Code/etclabs/dl-github-releases\")
   -p, --includePre                   download prerelease
   -d, --includeDraft                 download draft releases
   -a, --filterAssetsByName <rexexp>  filter assets name
-  -z, --zipped                       don't extract zip files
+  -z, --zipped                       don\'t extract zip files
   -h, --help                         output usage information
 Usage: download-github-release [options] <user> <repo> [outputdir]
 
@@ -28,7 +29,8 @@ Options:
   -p, --prerelease       download prerelease
   -s, --search <regexp>  filter assets name
 
-dl-github-release -a *.md open-rpc spec
+
+$ dl-github-release -a *.md open-rpc spec
 
 Downloading open-rpc/spec@1.0.0...
 spec.md                  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 0.0s
