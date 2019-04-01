@@ -1,16 +1,16 @@
-# Dl Github Release
+# DL Github Releases
 
-A node module to download Github assets for github releases. It will also uncompress zip files.
+A node module to download Github assets for Github releases. It will also uncompress zip files.
 
 ## Command line
 
 ```bash
-$ npm install -g @etclabscore/dl-github-release
+$ npm install -g @etclabscore/dl-github-releases
 
 
-$ dl-github-release --help
+$ dl-github-releases --help
 
-Usage: download-github-release [options] <user> <repo>
+Usage: download-github-releases [options] <user> <repo>
 
 Options:
   -V, --version                      output the version number
@@ -20,7 +20,7 @@ Options:
   -a, --filterAssetsByName <rexexp>  filter assets name
   -z, --zipped                       don\'t extract zip files
   -h, --help                         output usage information
-Usage: download-github-release [options] <user> <repo> [outputdir]
+Usage: download-github-releases [options] <user> <repo> [outputdir]
 
 Options:
 
@@ -30,7 +30,7 @@ Options:
   -s, --search <regexp>  filter assets name
 
 
-$ dl-github-release -a *.md open-rpc spec
+$ dl-github-releases -a *.md open-rpc spec
 
 Downloading open-rpc/spec@1.0.0...
 spec.md                  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 0.0s
@@ -43,13 +43,13 @@ spec.pdf                 ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 ### Installation
 
 ```bash
-npm install --save dl-github-release
+npm install --save dl-github-releases
 ```
 
 ### Usage
 
 ```javascript
-var downloadReleases = require('dl-github-release');
+var downloadReleases = require('dl-github-releases');
 
 var user = 'some user';
 var repo = 'some repo';
