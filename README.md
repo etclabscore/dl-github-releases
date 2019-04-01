@@ -47,7 +47,7 @@ npm install --save dl-github-release
 ### Usage
 
 ```javascript
-var downloadRelease = require('download-github-release');
+var downloadReleases = require('dl-github-release');
 
 var user = 'some user';
 var repo = 'some repo';
@@ -65,7 +65,7 @@ function filterAsset(asset) {
   return asset.name.indexOf('windows') >= 0;
 }
 
-downloadRelease(user, repo, outputdir, filterRelease, filterAsset)
+downloadReleases(user, repo, outputdir, filterRelease, filterAsset)
   .then(function() {
     console.log('All done!');
   })
