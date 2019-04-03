@@ -4,10 +4,11 @@ A node module to download Github assets for github releases. It will also uncomp
 
 ## Command line
 
-```bash
-npm install -g @etclabscore/dl-github-release
+```
+$ npm install -g @etclabscore/dl-github-release
 
-dl-github-release --help
+
+$ dl-github-release --help
 
 Usage: download-github-release [options] <user> <repo>
 
@@ -28,7 +29,8 @@ Options:
   -p, --prerelease       download prerelease
   -s, --search <regexp>  filter assets name
 
-dl-github-release -a *.md open-rpc spec
+
+$ dl-github-release -a *.md open-rpc spec
 
 Downloading open-rpc/spec@1.0.0...
 spec.md                  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 0.0s
@@ -47,7 +49,7 @@ npm install --save dl-github-release
 ### Usage
 
 ```javascript
-var downloadRelease = require('download-github-release');
+var downloadReleases = require('dl-github-release');
 
 var user = 'some user';
 var repo = 'some repo';
@@ -65,7 +67,7 @@ function filterAsset(asset) {
   return asset.name.indexOf('windows') >= 0;
 }
 
-downloadRelease(user, repo, outputdir, filterRelease, filterAsset)
+downloadReleases(user, repo, outputdir, filterRelease, filterAsset)
   .then(function() {
     console.log('All done!');
   })
