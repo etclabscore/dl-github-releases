@@ -6,7 +6,7 @@ A node module to download Github assets for Github releases. It will also uncomp
 
 ```bash
 $ npm install -g @etclabscore/dl-github-releases
-
+```
 
 $ dl-github-releases --help
 
@@ -14,11 +14,11 @@ Usage: download-github-releases [options] <user> <repo>
 
 Options:
   -V, --version                      output the version number
-  -o, --outputDir [output]           output directory [output] (default: \"/Users/zb/Code/etclabs/dl-github-releases\")
+  -o, --outputDir [output]           output directory [output] (default: "/Users/zb/Code/etclabs/dl-github-releases")
   -p, --includePre                   download prerelease
   -d, --includeDraft                 download draft releases
   -a, --filterAssetsByName <rexexp>  filter assets name
-  -z, --zipped                       don\'t extract zip files
+  -z, --zipped                       don't extract zip files
   -h, --help                         output usage information
 Usage: download-github-releases [options] <user> <repo> [outputdir]
 
