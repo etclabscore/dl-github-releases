@@ -5,6 +5,7 @@ import _extractZip from "extract-zip";
 import { promisify } from "util";
 import { join } from "path";
 import { ensureDir } from "fs-extra";
+import { flatten } from "lodash";
 
 const extract = promisify(_extractZip);
 
@@ -20,7 +21,7 @@ export default async function downloadReleases(
   filterAsset = pass,
   unzip = false,
   consoleLogs = false,
-) {
+): Promise<string[]> {
   const releases = await getReleases(user, repo);
 
   const filteredReleases = releases.filter(filterRelease)
@@ -34,16 +35,7 @@ export default async function downloadReleases(
       throw new Error(`could not find a release for ${user}/${repo}`);
     }
 
-    if (consoleLogs) {
-      console.log(`Downloading ${user}/${repo}@${release.tag_name}...`);
-      console.log(`there are ${release.assets.length} assets to download`);
-    }
-
-    const promises = release.assets.map(async (asset: any) => {
-      if (consoleLogs) {
-        console.log("downloading asset: ", asset.name);
-      }
-
+    const promises = release.assets.map(async (asset: any): Promise<string> => {
       const destd = join(outputDir, release.tag_name);
       await ensureDir(destd);
       const destf = join(destd, asset.name);
@@ -55,13 +47,13 @@ export default async function downloadReleases(
         await extract(destf, { dir: destd });
         await unlinkSync(destf);
       }
-      return asset.name;
+      return asset.name as string;
     });
 
-    const result = await Promise.all(promises);
+    const result = await Promise.all(promises) as string[];
 
     return result;
   }));
 
-  return bigResult;
+  return flatten(bigResult) as string[];
 }
