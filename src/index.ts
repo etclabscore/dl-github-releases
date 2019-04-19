@@ -13,6 +13,9 @@ function pass() {
   return true;
 }
 
+/**
+ * Todo: add typedoc
+ */
 export default async function downloadReleases(
   user: string,
   repo: string,
