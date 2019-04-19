@@ -2,7 +2,6 @@ import { unlinkSync, createWriteStream } from "fs";
 import MultiProgress from "multi-progress";
 import getReleases from "./get-releases";
 import download from "./download";
-import rpad from "./rpad";
 import _extractZip from "extract-zip";
 import { promisify } from "util";
 import { join } from "path";
@@ -21,10 +20,8 @@ export default async function downloadReleases(
   filterRelease = pass,
   filterAsset = pass,
   unzip = false,
+  consoleLogs = false,
 ) {
-  await ensureDir(outputDir);
-  const bars = new MultiProgress(process.stdout);
-
   const releases = await getReleases(user, repo);
 
   const filteredReleases = releases.filter(filterRelease)
@@ -33,37 +30,39 @@ export default async function downloadReleases(
       return { ...release, assets: filteredAssets };
     });
 
-  await Promise.all(filteredReleases.map((release: any) => {
+  const bigResult = await Promise.all(filteredReleases.map(async (release: any) => {
     if (!release) {
       throw new Error(`could not find a release for ${user}/${repo}`);
     }
 
-    console.log(`Downloading ${user}/${repo}@${release.tag_name}...`);
+    if (consoleLogs) {
+      console.log(`Downloading ${user}/${repo}@${release.tag_name}...`);
+      console.log(`there are ${release.assets.length} assets to download`);
+    }
 
-    const promises = release.assets.map((asset: any) => {
-      const width = process.stdout.columns as number - 36;
-      const bar = bars.newBar(`${rpad(asset.name, 24)} :bar :etas`, {
-        complete: "▇",
-        incomplete: "-",
-        width,
-        total: 100,
-      });
+    const promises = release.assets.map(async (asset: any) => {
+      if (consoleLogs) {
+        console.log("downloading asset: ", asset.name);
+      }
 
-      const progress = process.stdout.isTTY ? bar.update.bind(bar) : pass;
-
-      const destf = join(outputDir, asset.name);
+      const destd = join(outputDir, release.tag_name);
+      await ensureDir(destd);
+      const destf = join(destd, asset.name);
       const dest = createWriteStream(destf);
 
-      return download(asset.browser_download_url, dest, progress)
-        .then((): any => {
-          if (unzip && /\.zip$/.exec(destf)) {
-            return extract(destf, { dir: outputDir }).then(() => unlinkSync(destf));
-          }
+      await download(asset.browser_download_url, dest);
 
-          return null;
-        });
+      if (unzip && /\.zip$/.exec(destf)) {
+        await extract(destf, { dir: destd });
+        await unlinkSync(destf);
+      }
+      return asset.name;
     });
 
-    return Promise.all(promises);
+    const result = await Promise.all(promises);
+
+    return result;
   }));
+
+  return bigResult;
 }
