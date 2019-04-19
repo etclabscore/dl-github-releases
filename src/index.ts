@@ -1,5 +1,4 @@
 import { unlinkSync, createWriteStream } from "fs";
-import MultiProgress from "multi-progress";
 import getReleases from "./get-releases";
 import download from "./download";
 import _extractZip from "extract-zip";
