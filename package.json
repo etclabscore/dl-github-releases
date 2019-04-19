@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/etclabscore/download-github-releases.git"
+    "url": "https://github.com/etclabscore/dl-github-releases.git"
   },
   "keywords": [
     "github",
