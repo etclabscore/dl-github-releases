@@ -2,7 +2,7 @@
   "name": "@etclabscore/dl-github-releases",
   "version": "1.0.3",
   "description": "",
-  "main": "build/src/index.js",
+  "main": "build/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/etclabscore/dl-github-releases.git"
