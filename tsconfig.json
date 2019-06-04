@@ -10,5 +10,30 @@
     "strict": true,
     "esModuleInterop": true,
     "resolveJsonModule": true
+  },
+  "typedocOptions": {
+    "name": "@etclabscore/dl-github-releases",
+    "mode": "file",
+    "src": [ "./src/index.ts" ],
+    "out": "docs",
+    "includeDeclarations": true,
+    "excludeNotExported": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "hideGenerator": true,
+    "listInvalidSymbolLinks": true,
+    "readme": "./README.md",
+    "exclude": [
+      "node_modules",
+      "lib",
+      "docs",
+      "build",
+      "jest.config.js",
+      "src/**/*.test.ts"
+    ],
+    "toc": [
+      "downloadReleases",
+      "listReleases"
+    ]
   }
 }
