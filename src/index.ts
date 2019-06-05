@@ -1,5 +1,5 @@
 import { unlinkSync, createWriteStream } from "fs";
-import getReleases, { Releases } from "./get-releases";
+import getReleases, { Releases, Asset } from "./get-releases";
 import download from "./download";
 import _extractZip from "extract-zip";
 import { promisify } from "util";
@@ -45,8 +45,7 @@ export async function listReleases(
   filterAsset = pass,
 ): Promise<string[]> {
   const releases = await getFilteredReleases(user, repo, filterRelease, filterAsset);
-
-  return releases.map(({ tag_name }) => tag_name);
+  return releases.map(({ tag_name }) => tag_name) as string[];
 }
 
 /**
@@ -75,7 +74,7 @@ export default async function downloadReleases(
       throw new Error(`could not find a release for ${user}/${repo}`);
     }
 
-    const promises = release.assets.map(async (asset: any): Promise<string> => {
+    const promises = release.assets.map(async (asset: Asset): Promise<string> => {
       const destd = join(outputDir, release.tag_name);
       await ensureDir(destd);
       const destf = join(destd, asset.name);
@@ -87,8 +86,8 @@ export default async function downloadReleases(
         await extract(destf, { dir: destd });
         await unlinkSync(destf);
       }
-      return asset.name as string;
-    });
+      return asset.name;
+    }) as Array<Promise<string>>;
 
     const result = await Promise.all(promises) as string[];
 
