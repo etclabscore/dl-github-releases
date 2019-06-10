@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@etclabscore/dl-github-releases</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@etclabscore/dl-github-releases</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> @etclabscore/dl-github-releases</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="dl-github-releases">DL Github Releases</h1>
+				<p>A node module to download Github assets for Github releases. It will also uncompress zip files.</p>
+				<h2 id="command-line">Command line</h2>
+				<pre><code>$ npm <span class="hljs-keyword">install</span> -g @etclabscore/dl-github-releases
+
+
+$ dl-github-releases <span class="hljs-comment">--help</span>
+
+<span class="hljs-keyword">Usage</span>: download-github-releases [options] &lt;<span class="hljs-keyword">user</span>&gt; &lt;repo&gt;
+
+Options:
+  -V, <span class="hljs-comment">--version                      output the version number</span>
+  -o, <span class="hljs-comment">--outputDir [output]           output directory [output] (default: "/Users/zb/Code/etclabs/dl-github-releases")</span>
+  -p, <span class="hljs-comment">--includePre                   download prerelease</span>
+  -d, <span class="hljs-comment">--includeDraft                 download draft releases</span>
+  -a, <span class="hljs-comment">--filterAssetsByName &lt;rexexp&gt;  filter assets name</span>
+  -z, <span class="hljs-comment">--zipped                       don't extract zip files</span>
+  -h, <span class="hljs-comment">--help                         output usage information</span>
+<span class="hljs-keyword">Usage</span>: download-github-<span class="hljs-keyword">release</span> [options] &lt;<span class="hljs-keyword">user</span>&gt; &lt;repo&gt; [outputdir]
+
+Options:
+
+  -h, <span class="hljs-comment">--help             output usage information</span>
+  -V, <span class="hljs-comment">--version          output the version number</span>
+  -p, <span class="hljs-comment">--prerelease       download prerelease</span>
+  -s, <span class="hljs-comment">--search &lt;regexp&gt;  filter assets name</span>
+
+
+$ dl-github-releases -a *.md <span class="hljs-keyword">open</span>-rpc spec
+
+Downloading <span class="hljs-keyword">open</span>-rpc/spec@<span class="hljs-number">1.0</span><span class="hljs-number">.0</span>...
+spec.md                  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ <span class="hljs-number">0.0</span>s
+spec.pdf                 ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇<span class="hljs-comment">--------- 0.1s</span></code></pre><h2 id="javascript-api">Javascript API</h2>
+				<h3 id="installation">Installation</h3>
+				<pre><code class="language-bash">npm install --save dl-github-releases</code></pre>
+				<h3 id="usage">Usage</h3>
+				<pre><code class="language-javascript"><span class="hljs-keyword">var</span> downloadReleases = <span class="hljs-built_in">require</span>(<span class="hljs-string">'dl-github-releases'</span>);
+
+<span class="hljs-keyword">var</span> user = <span class="hljs-string">'some user'</span>;
+<span class="hljs-keyword">var</span> repo = <span class="hljs-string">'some repo'</span>;
+<span class="hljs-keyword">var</span> outputdir = <span class="hljs-string">'some output directory'</span>;
+
+<span class="hljs-comment">// Define a function to filter releases.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterRelease</span>(<span class="hljs-params">release</span>) </span>{
+  <span class="hljs-comment">// Filter out prereleases.</span>
+  <span class="hljs-keyword">return</span> release.prerelease === <span class="hljs-literal">false</span>;
+}
+
+<span class="hljs-comment">// Define a function to filter assets.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterAsset</span>(<span class="hljs-params">asset</span>) </span>{
+  <span class="hljs-comment">// Select assets that contain the string 'windows'.</span>
+  <span class="hljs-keyword">return</span> asset.name.indexOf(<span class="hljs-string">'windows'</span>) &gt;= <span class="hljs-number">0</span>;
+}
+
+downloadReleases(user, repo, outputdir, filterRelease, filterAsset)
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'All done!'</span>);
+  })
+  .catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+    <span class="hljs-built_in">console</span>.error(err.message);
+  });</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function">
+						<a href="globals.html#downloadreleases" class="tsd-kind-icon">download<wbr>Releases</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#listreleases" class="tsd-kind-icon">list<wbr>Releases</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
