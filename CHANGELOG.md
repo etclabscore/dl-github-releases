@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/etclabscore/dl-github-releases/compare/1.1.1...1.1.2) (2020-04-16)
+
+
+### Bug Fixes
+
+* checkout before deploying to keep npm clean ([df37d92](https://github.com/etclabscore/dl-github-releases/commit/df37d92ba2bb493bd31224b9bd8f7c22cbcbbcc7))
+
 ## [1.1.1](https://github.com/etclabscore/dl-github-releases/compare/1.1.0...1.1.1) (2020-04-16)
 
 
