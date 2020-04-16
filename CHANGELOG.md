@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/etclabscore/dl-github-releases/compare/1.1.0...1.1.1) (2020-04-16)
+
+
+### Bug Fixes
+
+* update deps ([53c1f84](https://github.com/etclabscore/dl-github-releases/commit/53c1f8405eb6eb112803d4872efa5038c5261bdf))
+
 # [1.1.0](https://github.com/etclabscore/dl-github-releases/compare/1.0.9...1.1.0) (2019-06-10)
 
 
