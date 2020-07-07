@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/extract-zip": "^1.6.2",
     "@types/fs-extra": "^5.1.0",
-    "@types/jest": "^24.9.1",
+    "@types/jest": "^26.0.4",
     "@types/lodash": "^4.14.149",
     "@types/node": "^11.15.10",
     "@types/node-fetch": "^2.5.6",
