@@ -1,5 +1,15 @@
 # DL Github Releases
 
+<center>
+  <span>
+    <img alt="CircleCI branch" src="https://img.shields.io/circleci/project/github/etclabscore/dl-github-releases/master.svg">
+    <img alt="Dependabot status" src="https://api.dependabot.com/badges/status?host=github&repo=etclabscore/dl-github-releases" />
+    <img alt="npm" src="https://img.shields.io/npm/dt/@etclabscore/dl-github-releases.svg" />
+    <img alt="GitHub release" src="https://img.shields.io/github/release/etclabscore/dl-github-releases.svg" />
+    <img alt="GitHub commits since latest release" src="https://img.shields.io/github/commits-since/etclabscore/dl-github-releases/latest.svg" />
+  </span>
+</center>
+
 A node module to download Github assets for Github releases. It will also uncompress zip files.
 
 ## Command line
