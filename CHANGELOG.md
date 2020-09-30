@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/etclabscore/dl-github-releases/compare/1.2.0...1.2.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* fs-extra  is not a dev-dep ([c90de81](https://github.com/etclabscore/dl-github-releases/commit/c90de81b5adb7c744de124c389442935e10ccd72))
+
 # [1.2.0](https://github.com/etclabscore/dl-github-releases/compare/1.1.2...1.2.0) (2020-09-30)
 
 
