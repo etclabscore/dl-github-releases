@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/etclabscore/dl-github-releases/compare/1.1.2...1.2.0) (2020-09-30)
+
+
+### Bug Fixes
+
+* add hekka sweet badges ([3e4101c](https://github.com/etclabscore/dl-github-releases/commit/3e4101cad814e2984090cc33ceada081da662065))
+* add missing dep ([b9ce8f7](https://github.com/etclabscore/dl-github-releases/commit/b9ce8f785425cff687b2685ee4ae13d11ad3b806))
+* make apache 2 licensed ([04c5d43](https://github.com/etclabscore/dl-github-releases/commit/04c5d43313464a9b3ae9f8d5600b3a0710007cfc))
+
+
+### Features
+
+* update all deps ([50562b0](https://github.com/etclabscore/dl-github-releases/commit/50562b04556b534cf73d5f47ea902efde755e043))
+
 ## [1.1.2](https://github.com/etclabscore/dl-github-releases/compare/1.1.1...1.1.2) (2020-04-16)
 
 
