@@ -69,15 +69,15 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel">
 				<h3 class="tsd-before-signature">Callable</h3>
-				<ul class="tsd-signatures tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">write<wbr>File<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="_fs_.html#pathlike" class="tsd-signature-type">PathLike</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">: </span><a href="_fs_.html#writefileoptions" class="tsd-signature-type">WriteFileOptions</a>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					<li class="tsd-signature tsd-kind-icon">write<wbr>File<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="_fs_.html#pathlike" class="tsd-signature-type">PathLike</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<ul class="tsd-signatures tsd-kind-namespace tsd-parent-kind-module tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">write<wbr>File<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="_fs_.html#pathlike" class="tsd-signature-type">PathLike</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="nodejs.html#arraybufferview" class="tsd-signature-type">ArrayBufferView</a>, options<span class="tsd-signature-symbol">: </span><a href="_fs_.html#writefileoptions" class="tsd-signature-type">WriteFileOptions</a>, callback<span class="tsd-signature-symbol">: </span><a href="_fs_.html#noparamcallback" class="tsd-signature-type">NoParamCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">write<wbr>File<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="_fs_.html#pathlike" class="tsd-signature-type">PathLike</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="nodejs.html#arraybufferview" class="tsd-signature-type">ArrayBufferView</a>, callback<span class="tsd-signature-symbol">: </span><a href="_fs_.html#noparamcallback" class="tsd-signature-type">NoParamCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in node_modules/@types/node/fs.d.ts:1325</li>
+								<li>Defined in node_modules/@types/node/fs.d.ts:1571</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -96,7 +96,7 @@
 								</div>
 							</li>
 							<li>
-								<h5>data: <span class="tsd-signature-type">any</span></h5>
+								<h5>data: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="nodejs.html#arraybufferview" class="tsd-signature-type">ArrayBufferView</a></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>The data to write. If something other than a Buffer or Uint8Array is provided, the value is coerced to a string.</p>
 								</div>
@@ -112,25 +112,7 @@
 								</div>
 							</li>
 							<li>
-								<h5>callback: <span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
-								<ul class="tsd-parameters">
-									<li class="tsd-parameter-signature">
-										<ul class="tsd-signatures tsd-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5>err: <a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
-													</li>
-												</ul>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-											</li>
-										</ul>
-									</li>
-								</ul>
+								<h5>callback: <a href="_fs_.html#noparamcallback" class="tsd-signature-type">NoParamCallback</a></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -138,7 +120,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in node_modules/@types/node/fs.d.ts:1334</li>
+								<li>Defined in node_modules/@types/node/fs.d.ts:1580</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -157,31 +139,13 @@
 								</div>
 							</li>
 							<li>
-								<h5>data: <span class="tsd-signature-type">any</span></h5>
+								<h5>data: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="nodejs.html#arraybufferview" class="tsd-signature-type">ArrayBufferView</a></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>The data to write. If something other than a Buffer or Uint8Array is provided, the value is coerced to a string.</p>
 								</div>
 							</li>
 							<li>
-								<h5>callback: <span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
-								<ul class="tsd-parameters">
-									<li class="tsd-parameter-signature">
-										<ul class="tsd-signatures tsd-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5>err: <a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
-													</li>
-												</ul>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-											</li>
-										</ul>
-									</li>
-								</ul>
+								<h5>callback: <a href="_fs_.html#noparamcallback" class="tsd-signature-type">NoParamCallback</a></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -207,13 +171,13 @@
 					<a name="__promisify__" class="tsd-anchor"></a>
 					<h3>__promisify__</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">__promisify__<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="_fs_.html#pathlike" class="tsd-signature-type">PathLike</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><a href="_fs_.html#writefileoptions" class="tsd-signature-type">WriteFileOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/promise.html" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">__promisify__<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="_fs_.html#pathlike" class="tsd-signature-type">PathLike</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="nodejs.html#arraybufferview" class="tsd-signature-type">ArrayBufferView</a>, options<span class="tsd-signature-symbol">?: </span><a href="_fs_.html#writefileoptions" class="tsd-signature-type">WriteFileOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/promise.html" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/fs.d.ts:1350</li>
+									<li>Defined in node_modules/@types/node/fs.d.ts:1596</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,7 +196,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>data: <span class="tsd-signature-type">any</span></h5>
+									<h5>data: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="nodejs.html#arraybufferview" class="tsd-signature-type">ArrayBufferView</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The data to write. If something other than a Buffer or Uint8Array is provided, the value is coerced to a string.</p>
 									</div>
@@ -260,10 +224,10 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="_fs_.html">&quot;fs&quot;</a>
 						<ul>
-							<li class="current tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external">
+							<li class="current tsd-kind-namespace tsd-parent-kind-module tsd-is-external">
 								<a href="_fs_.writefile.html">write<wbr>File</a>
 							</li>
 						</ul>
@@ -289,6 +253,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

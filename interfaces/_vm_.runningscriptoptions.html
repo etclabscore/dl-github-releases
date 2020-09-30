@@ -87,10 +87,12 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_vm_.runningscriptoptions.html#breakonsigint" class="tsd-kind-icon">break<wbr>OnSigint</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="_vm_.runningscriptoptions.html#columnoffset" class="tsd-kind-icon">column<wbr>Offset</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_vm_.runningscriptoptions.html#displayerrors" class="tsd-kind-icon">display<wbr>Errors</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="_vm_.runningscriptoptions.html#filename" class="tsd-kind-icon">filename</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="_vm_.runningscriptoptions.html#lineoffset" class="tsd-kind-icon">line<wbr>Offset</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_vm_.runningscriptoptions.html#microtaskmode" class="tsd-kind-icon">microtask<wbr>Mode</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_vm_.runningscriptoptions.html#timeout" class="tsd-kind-icon">timeout</a></li>
 							</ul>
 						</section>
@@ -99,6 +101,24 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="breakonsigint" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> break<wbr>OnSigint</h3>
+					<div class="tsd-signature tsd-kind-icon">break<wbr>OnSigint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/vm.d.ts:43</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If <code>true</code>, the execution will be terminated when <code>SIGINT</code> (Ctrl+C) is received.
+								Existing handlers for the event that have been attached via <code>process.on(&#39;SIGINT&#39;)</code> will be disabled during script execution, but will continue to work after that.
+								If execution is terminated, an <code>Error</code> will be thrown.
+							Default: <code>false</code>.</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 					<a name="columnoffset" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> column<wbr>Offset</h3>
@@ -106,7 +126,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_vm_.baseoptions.html">BaseOptions</a>.<a href="_vm_.baseoptions.html#columnoffset">columnOffset</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/node/vm.d.ts:20</li>
+							<li>Defined in node_modules/@types/node/vm.d.ts:18</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -122,9 +142,15 @@
 					<div class="tsd-signature tsd-kind-icon">display<wbr>Errors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/vm.d.ts:29</li>
+							<li>Defined in node_modules/@types/node/vm.d.ts:31</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>When <code>true</code>, if an <code>Error</code> occurs while compiling the <code>code</code>, the line of code causing the error is attached to the stack trace.
+							Default: <code>true</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 					<a name="filename" class="tsd-anchor"></a>
@@ -133,7 +159,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_vm_.baseoptions.html">BaseOptions</a>.<a href="_vm_.baseoptions.html#filename">filename</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/node/vm.d.ts:10</li>
+							<li>Defined in node_modules/@types/node/vm.d.ts:8</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -150,7 +176,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_vm_.baseoptions.html">BaseOptions</a>.<a href="_vm_.baseoptions.html#lineoffset">lineOffset</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/node/vm.d.ts:15</li>
+							<li>Defined in node_modules/@types/node/vm.d.ts:13</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -161,14 +187,35 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="microtaskmode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> microtask<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">microtask<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"afterEvaluate"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/vm.d.ts:47</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to <code>afterEvaluate</code>, microtasks will be run immediately after the script has run.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="timeout" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> timeout</h3>
 					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/vm.d.ts:30</li>
+							<li>Defined in node_modules/@types/node/vm.d.ts:36</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies the number of milliseconds to execute code before terminating execution.
+							If execution is terminated, an <code>Error</code> will be thrown. This value must be a strictly positive integer.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -178,7 +225,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="../modules/_vm_.html">&quot;vm&quot;</a>
 					</li>
 				</ul>
@@ -202,6 +249,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

@@ -84,6 +84,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.serveroptions.html#incomingmessage" class="tsd-kind-icon">Incoming<wbr>Message</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.serveroptions.html#serverresponse" class="tsd-kind-icon">Server<wbr>Response</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.serveroptions.html#insecurehttpparser" class="tsd-kind-icon">insecureHTTPParser</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.serveroptions.html#maxheadersize" class="tsd-kind-icon">max<wbr>Header<wbr>Size</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,7 +99,7 @@
 					<div class="tsd-signature tsd-kind-icon">Incoming<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="../classes/_http_.incomingmessage.html" class="tsd-signature-type">IncomingMessage</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/http.d.ts:93</li>
+							<li>Defined in node_modules/@types/node/http.d.ts:97</li>
 						</ul>
 					</aside>
 				</section>
@@ -107,9 +109,53 @@
 					<div class="tsd-signature tsd-kind-icon">Server<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="../classes/_http_.serverresponse.html" class="tsd-signature-type">ServerResponse</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/http.d.ts:94</li>
+							<li>Defined in node_modules/@types/node/http.d.ts:98</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="insecurehttpparser" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> insecureHTTPParser</h3>
+					<div class="tsd-signature tsd-kind-icon">insecureHTTPParser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/http.d.ts:112</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Use an insecure HTTP parser that accepts invalid HTTP headers when true.
+								Using the insecure parser should be avoided.
+							See --insecure-http-parser for more information.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="maxheadersize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Header<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Header<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/http.d.ts:105</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Optionally overrides the value of
+								[<code>--max-http-header-size</code>][] for requests received by this server, i.e.
+							the maximum length of request headers in bytes.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>8192</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -119,7 +165,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="../modules/_http_.html">&quot;http&quot;</a>
 					</li>
 				</ul>
@@ -143,6 +189,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

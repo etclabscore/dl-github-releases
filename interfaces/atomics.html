@@ -106,11 +106,11 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="_symbol_tostringtag_" class="tsd-anchor"></a>
-					<h3>[<wbr>Symbol.to<wbr>String<wbr>Tag]</h3>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> [<wbr>Symbol.to<wbr>String<wbr>Tag]</h3>
 					<div class="tsd-signature tsd-kind-icon">[<wbr>Symbol.to<wbr>String<wbr>Tag]<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Atomics"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts:135</li>
+							<li>Defined in node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts:138</li>
 						</ul>
 					</aside>
 				</section>
@@ -330,13 +330,13 @@
 					<a name="notify" class="tsd-anchor"></a>
 					<h3>notify</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">notify<span class="tsd-signature-symbol">(</span>typedArray<span class="tsd-signature-symbol">: </span><a href="int32array.html" class="tsd-signature-type">Int32Array</a>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">notify<span class="tsd-signature-symbol">(</span>typedArray<span class="tsd-signature-symbol">: </span><a href="int32array.html" class="tsd-signature-type">Int32Array</a>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts:126</li>
+									<li>Defined in node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts:129</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -349,12 +349,21 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>typedArray: <a href="int32array.html" class="tsd-signature-type">Int32Array</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A shared Int32Array.</p>
+									</div>
 								</li>
 								<li>
 									<h5>index: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position in the typedArray to wake up on.</p>
+									</div>
 								</li>
 								<li>
-									<h5>count: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> count: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number of sleeping agents to notify. Defaults to +Infinity.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -518,7 +527,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts:133</li>
+									<li>Defined in node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts:136</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -621,6 +630,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

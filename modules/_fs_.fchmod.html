@@ -69,14 +69,14 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel">
 				<h3 class="tsd-before-signature">Callable</h3>
-				<ul class="tsd-signatures tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">fchmod<span class="tsd-signature-symbol">(</span>fd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<ul class="tsd-signatures tsd-kind-namespace tsd-parent-kind-module tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">fchmod<span class="tsd-signature-symbol">(</span>fd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mode<span class="tsd-signature-symbol">: </span><a href="_fs_.html#mode" class="tsd-signature-type">Mode</a>, callback<span class="tsd-signature-symbol">: </span><a href="_fs_.html#noparamcallback" class="tsd-signature-type">NoParamCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in node_modules/@types/node/fs.d.ts:325</li>
+								<li>Defined in node_modules/@types/node/fs.d.ts:459</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -93,31 +93,13 @@
 								</div>
 							</li>
 							<li>
-								<h5>mode: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<h5>mode: <a href="_fs_.html#mode" class="tsd-signature-type">Mode</a></h5>
 								<div class="tsd-comment tsd-typography">
 									<p>A file mode. If a string is passed, it is parsed as an octal integer.</p>
 								</div>
 							</li>
 							<li>
-								<h5>callback: <span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
-								<ul class="tsd-parameters">
-									<li class="tsd-parameter-signature">
-										<ul class="tsd-signatures tsd-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5>err: <a href="../interfaces/nodejs.errnoexception.html" class="tsd-signature-type">ErrnoException</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
-													</li>
-												</ul>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-											</li>
-										</ul>
-									</li>
-								</ul>
+								<h5>callback: <a href="_fs_.html#noparamcallback" class="tsd-signature-type">NoParamCallback</a></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -143,13 +125,13 @@
 					<a name="__promisify__" class="tsd-anchor"></a>
 					<h3>__promisify__</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">__promisify__<span class="tsd-signature-symbol">(</span>fd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/promise.html" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">__promisify__<span class="tsd-signature-symbol">(</span>fd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mode<span class="tsd-signature-symbol">: </span><a href="_fs_.html#mode" class="tsd-signature-type">Mode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/promise.html" class="tsd-signature-type">Promise</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/fs.d.ts:334</li>
+									<li>Defined in node_modules/@types/node/fs.d.ts:468</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -166,7 +148,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>mode: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>mode: <a href="_fs_.html#mode" class="tsd-signature-type">Mode</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A file mode. If a string is passed, it is parsed as an octal integer.</p>
 									</div>
@@ -184,10 +166,10 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="_fs_.html">&quot;fs&quot;</a>
 						<ul>
-							<li class="current tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external">
+							<li class="current tsd-kind-namespace tsd-parent-kind-module tsd-is-external">
 								<a href="_fs_.fchmod.html">fchmod</a>
 							</li>
 						</ul>
@@ -213,6 +195,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

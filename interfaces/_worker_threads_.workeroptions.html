@@ -82,12 +82,16 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#argv" class="tsd-kind-icon">argv</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#env" class="tsd-kind-icon">env</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#eval" class="tsd-kind-icon">eval</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#execargv" class="tsd-kind-icon">exec<wbr>Argv</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#resourcelimits" class="tsd-kind-icon">resource<wbr>Limits</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#stderr" class="tsd-kind-icon">stderr</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#stdin" class="tsd-kind-icon">stdin</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#stdout" class="tsd-kind-icon">stdout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#trackunmanagedfds" class="tsd-kind-icon">track<wbr>Unmanaged<wbr>Fds</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#transferlist" class="tsd-kind-icon">transfer<wbr>List</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_worker_threads_.workeroptions.html#workerdata" class="tsd-kind-icon">worker<wbr>Data</a></li>
 							</ul>
 						</section>
@@ -97,12 +101,30 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="env" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> env</h3>
-					<div class="tsd-signature tsd-kind-icon">env<span class="tsd-signature-symbol">:</span> <a href="nodejs.processenv.html" class="tsd-signature-type">ProcessEnv</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">typeof </span><a href="../modules/_worker_threads_.html#share_env" class="tsd-signature-type">SHARE_ENV</a></div>
+					<a name="argv" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> argv</h3>
+					<div class="tsd-signature tsd-kind-icon">argv<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/worker_threads.d.ts:59</li>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:65</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of arguments which would be stringified and appended to
+								<code>process.argv</code> in the worker. This is mostly similar to the <code>workerData</code>
+								but the values will be available on the global <code>process.argv</code> as if they
+							were passed as CLI options to the script.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="env" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> env</h3>
+					<div class="tsd-signature tsd-kind-icon">env<span class="tsd-signature-symbol">:</span> <a href="nodejs.dict.html" class="tsd-signature-type">Dict</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">typeof </span><a href="../modules/_worker_threads_.html#share_env" class="tsd-signature-type">SHARE_ENV</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:66</li>
 						</ul>
 					</aside>
 				</section>
@@ -112,7 +134,7 @@
 					<div class="tsd-signature tsd-kind-icon">eval<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/worker_threads.d.ts:58</li>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:67</li>
 						</ul>
 					</aside>
 				</section>
@@ -122,7 +144,17 @@
 					<div class="tsd-signature tsd-kind-icon">exec<wbr>Argv<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/worker_threads.d.ts:64</li>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:72</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="resourcelimits" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> resource<wbr>Limits</h3>
+					<div class="tsd-signature tsd-kind-icon">resource<wbr>Limits<span class="tsd-signature-symbol">:</span> <a href="_worker_threads_.resourcelimits.html" class="tsd-signature-type">ResourceLimits</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:73</li>
 						</ul>
 					</aside>
 				</section>
@@ -132,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">stderr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/worker_threads.d.ts:63</li>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:71</li>
 						</ul>
 					</aside>
 				</section>
@@ -142,7 +174,7 @@
 					<div class="tsd-signature tsd-kind-icon">stdin<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/worker_threads.d.ts:61</li>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:69</li>
 						</ul>
 					</aside>
 				</section>
@@ -152,9 +184,34 @@
 					<div class="tsd-signature tsd-kind-icon">stdout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/worker_threads.d.ts:62</li>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:70</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="trackunmanagedfds" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> track<wbr>Unmanaged<wbr>Fds</h3>
+					<div class="tsd-signature tsd-kind-icon">track<wbr>Unmanaged<wbr>Fds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:78</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="transferlist" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> transfer<wbr>List</h3>
+					<div class="tsd-signature tsd-kind-icon">transfer<wbr>List<span class="tsd-signature-symbol">:</span> <a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="arraybuffer.html" class="tsd-signature-type">ArrayBuffer</a><span class="tsd-signature-symbol"> | </span><a href="../classes/_worker_threads_.messageport.html" class="tsd-signature-type">MessagePort</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:77</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Additional data to send in the first worker message.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="workerdata" class="tsd-anchor"></a>
@@ -162,7 +219,7 @@
 					<div class="tsd-signature tsd-kind-icon">worker<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/worker_threads.d.ts:60</li>
+							<li>Defined in node_modules/@types/node/worker_threads.d.ts:68</li>
 						</ul>
 					</aside>
 				</section>
@@ -174,7 +231,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="../modules/_worker_threads_.html">&quot;worker_<wbr>threads&quot;</a>
 					</li>
 				</ul>
@@ -198,6 +255,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

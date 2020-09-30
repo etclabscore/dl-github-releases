@@ -74,6 +74,9 @@
 						<span class="target">SecureContextOptions</span>
 						<ul class="tsd-hierarchy">
 							<li>
+								<a href="_tls_.tlssocketoptions.html" class="tsd-signature-type">TLSSocketOptions</a>
+							</li>
+							<li>
 								<a href="_tls_.tlsoptions.html" class="tsd-signature-type">TlsOptions</a>
 							</li>
 							<li>
@@ -103,9 +106,14 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#minversion" class="tsd-kind-icon">min<wbr>Version</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#passphrase" class="tsd-kind-icon">passphrase</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#pfx" class="tsd-kind-icon">pfx</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#privatekeyengine" class="tsd-kind-icon">private<wbr>Key<wbr>Engine</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#privatekeyidentifier" class="tsd-kind-icon">private<wbr>Key<wbr>Identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#secureoptions" class="tsd-kind-icon">secure<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#secureprotocol" class="tsd-kind-icon">secure<wbr>Protocol</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#sessionidcontext" class="tsd-kind-icon">session<wbr>IdContext</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#sessiontimeout" class="tsd-kind-icon">session<wbr>Timeout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#sigalgs" class="tsd-kind-icon">sigalgs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_tls_.securecontextoptions.html#ticketkeys" class="tsd-kind-icon">ticket<wbr>Keys</a></li>
 							</ul>
 						</section>
 					</div>
@@ -116,22 +124,42 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="ca" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ca</h3>
-					<div class="tsd-signature tsd-kind-icon">ca<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">ca<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:345</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:569</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Optionally override the trusted CA certificates. Default is to trust
+								the well-known CAs curated by Mozilla. Mozilla&#39;s CAs are completely
+							replaced when CAs are explicitly specified using this option.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="cert" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cert</h3>
-					<div class="tsd-signature tsd-kind-icon">cert<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cert<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:344</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:581</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p> Cert chains in PEM format. One cert chain should be provided per
+								private key. Each cert chain should consist of the PEM formatted
+								certificate for a provided private key, followed by the PEM
+								formatted intermediate certificates (if any), in order, and not
+								including the root CA (the root CA must be pre-known to the peer,
+								see ca). When providing multiple cert chains, they do not have to
+								be in the same order as their private keys in key. If the
+								intermediate certificates are not provided, the peer will not be
+							able to validate the certificate, and the handshake will fail.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="ciphers" class="tsd-anchor"></a>
@@ -139,9 +167,17 @@
 					<div class="tsd-signature tsd-kind-icon">ciphers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:346</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:595</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Cipher suite specification, replacing the default. For more
+								information, see modifying the default cipher suite. Permitted
+								ciphers can be obtained via tls.getCiphers(). Cipher names must be
+							uppercased in order for OpenSSL to accept them.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="clientcertengine" class="tsd-anchor"></a>
@@ -149,29 +185,49 @@
 					<div class="tsd-signature tsd-kind-icon">client<wbr>Cert<wbr>Engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:349</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:599</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of an OpenSSL engine which can provide the client certificate.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="crl" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> crl</h3>
-					<div class="tsd-signature tsd-kind-icon">crl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">crl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:350</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:603</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>PEM formatted CRLs (Certificate Revocation Lists).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="dhparam" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> dhparam</h3>
-					<div class="tsd-signature tsd-kind-icon">dhparam<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a></div>
+					<div class="tsd-signature tsd-kind-icon">dhparam<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:351</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:612</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Diffie Hellman parameters, required for Perfect Forward Secrecy. Use
+								openssl dhparam to create the parameters. The key length must be
+								greater than or equal to 1024 bits or else an error will be thrown.
+								Although 1024 bits is permissible, use 2048 bits or larger for
+								stronger security. If omitted or invalid, the parameters are
+							silently discarded and DHE ciphers will not be available.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="ecdhcurve" class="tsd-anchor"></a>
@@ -179,9 +235,20 @@
 					<div class="tsd-signature tsd-kind-icon">ecdh<wbr>Curve<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:348</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:622</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A string describing a named curve or a colon separated list of curve
+								NIDs or names, for example P-521:P-384:P-256, to use for ECDH key
+								agreement. Set to auto to select the curve automatically. Use
+								crypto.getCurves() to obtain a list of available curve names. On
+								recent releases, openssl ecparam -list_curves will also display the
+								name and description of each available elliptic curve. Default:
+							tls.DEFAULT_ECDH_CURVE.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="honorcipherorder" class="tsd-anchor"></a>
@@ -189,19 +256,38 @@
 					<div class="tsd-signature tsd-kind-icon">honor<wbr>Cipher<wbr>Order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:347</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:628</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Attempt to use the server&#39;s cipher suite preferences instead of the
+								client&#39;s. When true, causes SSL_OP_CIPHER_SERVER_PREFERENCE to be
+							set in secureOptions</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="key" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> key</h3>
-					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="object.html" class="tsd-signature-type">Object</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="_tls_.keyobject.html" class="tsd-signature-type">KeyObject</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:342</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:639</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Private keys in PEM format. PEM allows the option of private keys
+								being encrypted. Encrypted keys will be decrypted with
+								options.passphrase. Multiple keys using different algorithms can be
+								provided either as an array of unencrypted key strings or buffers,
+								or an array of objects in the form {pem: &lt;string|buffer&gt;[,
+								passphrase: <string>]}. The object form can only occur in an array.
+									object.passphrase is optional. Encrypted keys will be decrypted with
+							object.passphrase if provided, or options.passphrase if it is not.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="maxversion" class="tsd-anchor"></a>
@@ -209,14 +295,17 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Version<span class="tsd-signature-symbol">:</span> <a href="../modules/_tls_.html#secureversion" class="tsd-signature-type">SecureVersion</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:360</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:659</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Optionally set the maximum TLS version to allow. One
-								of <code>TLSv1.2&#39;</code>, <code>&#39;TLSv1.1&#39;</code>, or <code>&#39;TLSv1&#39;</code>. Cannot be specified along with the
-							<code>secureProtocol</code> option, use one or the other.  <strong>Default:</strong> <code>&#39;TLSv1.2&#39;</code>.</p>
+								of <code>&#39;TLSv1.3&#39;</code>, <code>&#39;TLSv1.2&#39;</code>, <code>&#39;TLSv1.1&#39;</code>, or <code>&#39;TLSv1&#39;</code>. Cannot be specified along with the
+								<code>secureProtocol</code> option, use one or the other.
+								<strong>Default:</strong> <code>&#39;TLSv1.3&#39;</code>, unless changed using CLI options. Using
+								<code>--tls-max-v1.2</code> sets the default to <code>&#39;TLSv1.2&#39;</code>. Using <code>--tls-max-v1.3</code> sets the default to
+							<code>&#39;TLSv1.3&#39;</code>. If multiple of the options are provided, the highest maximum is used.</p>
 						</div>
 					</div>
 				</section>
@@ -226,18 +315,19 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Version<span class="tsd-signature-symbol">:</span> <a href="../modules/_tls_.html#secureversion" class="tsd-signature-type">SecureVersion</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:370</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:670</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Optionally set the minimum TLS version to allow. One
-								of <code>TLSv1.2&#39;</code>, <code>&#39;TLSv1.1&#39;</code>, or <code>&#39;TLSv1&#39;</code>. Cannot be specified along with the
+								of <code>&#39;TLSv1.3&#39;</code>, <code>&#39;TLSv1.2&#39;</code>, <code>&#39;TLSv1.1&#39;</code>, or <code>&#39;TLSv1&#39;</code>. Cannot be specified along with the
 								<code>secureProtocol</code> option, use one or the other.  It is not recommended to use
 								less than TLSv1.2, but it may be required for interoperability.
 								<strong>Default:</strong> <code>&#39;TLSv1.2&#39;</code>, unless changed using CLI options. Using
-								<code>--tls-v1.0</code> changes the default to <code>&#39;TLSv1&#39;</code>. Using <code>--tls-v1.1</code> changes
-							the default to <code>&#39;TLSv1.1&#39;</code>.</p>
+								<code>--tls-v1.0</code> sets the default to <code>&#39;TLSv1&#39;</code>. Using <code>--tls-v1.1</code> sets the default to
+								<code>&#39;TLSv1.1&#39;</code>. Using <code>--tls-min-v1.3</code> sets the default to
+							&#39;TLSv1.3&#39;. If multiple of the options are provided, the lowest minimum is used.</p>
 						</div>
 					</div>
 				</section>
@@ -247,19 +337,69 @@
 					<div class="tsd-signature tsd-kind-icon">passphrase<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:343</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:674</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Shared passphrase used for a single private key and/or a PFX.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="pfx" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pfx</h3>
-					<div class="tsd-signature tsd-kind-icon">pfx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="object.html" class="tsd-signature-type">Object</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">pfx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="regexpmatcharray.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol"> | </span><a href="_tls_.pxfobject.html" class="tsd-signature-type">PxfObject</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:341</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:685</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>PFX or PKCS12 encoded private key and certificate chain. pfx is an
+								alternative to providing key and cert individually. PFX is usually
+								encrypted, if it is, passphrase will be used to decrypt it. Multiple
+								PFX can be provided either as an array of unencrypted PFX buffers,
+								or an array of objects in the form {buf: &lt;string|buffer&gt;[,
+								passphrase: <string>]}. The object form can only occur in an array.
+									object.passphrase is optional. Encrypted PFX will be decrypted with
+							object.passphrase if provided, or options.passphrase if it is not.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="privatekeyengine" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> private<wbr>Key<wbr>Engine</h3>
+					<div class="tsd-signature tsd-kind-icon">private<wbr>Key<wbr>Engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/tls.d.ts:644</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of an OpenSSL engine to get private key from. Should be used
+							together with privateKeyIdentifier.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="privatekeyidentifier" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> private<wbr>Key<wbr>Identifier</h3>
+					<div class="tsd-signature tsd-kind-icon">private<wbr>Key<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/tls.d.ts:650</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Identifier of a private key managed by an OpenSSL engine. Should be
+								used together with privateKeyEngine. Should not be set together with
+							key, because both options define a private key in different ways.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="secureoptions" class="tsd-anchor"></a>
@@ -267,9 +407,16 @@
 					<div class="tsd-signature tsd-kind-icon">secure<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:352</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:691</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Optionally affect the OpenSSL protocol behavior, which is not
+								usually necessary. This should be used carefully if at all! Value is
+							a numeric bitmask of the SSL_OP_* options from OpenSSL Options</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="secureprotocol" class="tsd-anchor"></a>
@@ -277,9 +424,22 @@
 					<div class="tsd-signature tsd-kind-icon">secure<wbr>Protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:353</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:703</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Legacy mechanism to select the TLS protocol version to use, it does
+								not support independent control of the minimum and maximum version,
+								and does not support limiting the protocol to TLSv1.3. Use
+								minVersion and maxVersion instead. The possible values are listed as
+								SSL_METHODS, use the function names as strings. For example, use
+								&#39;TLSv1_1_method&#39; to force TLS version 1.1, or &#39;TLS_method&#39; to allow
+								any TLS protocol version up to TLSv1.3. It is not recommended to use
+								TLS versions less than 1.2, but it may be required for
+							interoperability. Default: none, see minVersion.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="sessionidcontext" class="tsd-anchor"></a>
@@ -287,9 +447,64 @@
 					<div class="tsd-signature tsd-kind-icon">session<wbr>IdContext<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/tls.d.ts:354</li>
+							<li>Defined in node_modules/@types/node/tls.d.ts:708</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Opaque identifier used by servers to ensure session state is not
+							shared between applications. Unused by clients.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="sessiontimeout" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> session<wbr>Timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">session<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/tls.d.ts:717</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of seconds after which a TLS session created by the server
+							will no longer be resumable.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="sigalgs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sigalgs</h3>
+					<div class="tsd-signature tsd-kind-icon">sigalgs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/tls.d.ts:588</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p> Colon-separated list of supported signature algorithms. The list
+								can contain digest algorithms (SHA256, MD5 etc.), public key
+								algorithms (RSA-PSS, ECDSA etc.), combination of both (e.g
+							&#39;RSA+SHA384&#39;) or TLS v1.3 scheme names (e.g. rsa_pss_pss_sha512).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="ticketkeys" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ticket<wbr>Keys</h3>
+					<div class="tsd-signature tsd-kind-icon">ticket<wbr>Keys<span class="tsd-signature-symbol">:</span> <a href="../classes/buffer.html" class="tsd-signature-type">Buffer</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/tls.d.ts:712</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>48 bytes of cryptographically strong pseudo-random data.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -299,7 +514,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="../modules/_tls_.html">&quot;tls&quot;</a>
 					</li>
 				</ul>
@@ -323,6 +538,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

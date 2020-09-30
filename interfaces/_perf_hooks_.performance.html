@@ -89,12 +89,8 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#clearfunctions" class="tsd-kind-icon">clear<wbr>Functions</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#clearmarks" class="tsd-kind-icon">clear<wbr>Marks</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#clearmeasures" class="tsd-kind-icon">clear<wbr>Measures</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#getentries" class="tsd-kind-icon">get<wbr>Entries</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#getentriesbyname" class="tsd-kind-icon">get<wbr>Entries<wbr>ByName</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#getentriesbytype" class="tsd-kind-icon">get<wbr>Entries<wbr>ByType</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#eventlooputilization" class="tsd-kind-icon">event<wbr>Loop<wbr>Utilization</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#mark" class="tsd-kind-icon">mark</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#measure" class="tsd-kind-icon">measure</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_perf_hooks_.performance.html#now" class="tsd-kind-icon">now</a></li>
@@ -108,11 +104,11 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="nodetiming" class="tsd-anchor"></a>
-					<h3>node<wbr>Timing</h3>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> node<wbr>Timing</h3>
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Timing<span class="tsd-signature-symbol">:</span> <a href="_perf_hooks_.performancenodetiming.html" class="tsd-signature-type">PerformanceNodeTiming</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/perf_hooks.d.ts:175</li>
+							<li>Defined in node_modules/@types/node/perf_hooks.d.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -123,11 +119,11 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="timeorigin" class="tsd-anchor"></a>
-					<h3>time<wbr>Origin</h3>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> time<wbr>Origin</h3>
 					<div class="tsd-signature tsd-kind-icon">time<wbr>Origin<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/perf_hooks.d.ts:185</li>
+							<li>Defined in node_modules/@types/node/perf_hooks.d.ts:134</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -140,37 +136,6 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-					<a name="clearfunctions" class="tsd-anchor"></a>
-					<h3>clear<wbr>Functions</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">clear<wbr>Functions<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:108</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>If name is not provided, removes all PerformanceFunction objects from the Performance Timeline.
-									If name is provided, removes entries with name.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 					<a name="clearmarks" class="tsd-anchor"></a>
 					<h3>clear<wbr>Marks</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
@@ -180,7 +145,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:115</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:93</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -202,117 +167,41 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-					<a name="clearmeasures" class="tsd-anchor"></a>
-					<h3>clear<wbr>Measures</h3>
+					<a name="eventlooputilization" class="tsd-anchor"></a>
+					<h3>event<wbr>Loop<wbr>Utilization</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">clear<wbr>Measures<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">event<wbr>Loop<wbr>Utilization<span class="tsd-signature-symbol">(</span>util1<span class="tsd-signature-symbol">?: </span><a href="_perf_hooks_.eventlooputilization.html" class="tsd-signature-type">EventLoopUtilization</a>, util2<span class="tsd-signature-symbol">?: </span><a href="_perf_hooks_.eventlooputilization.html" class="tsd-signature-type">EventLoopUtilization</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_perf_hooks_.eventlooputilization.html" class="tsd-signature-type">EventLoopUtilization</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:121</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:151</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>If name is not provided, removes all PerformanceMeasure objects from the Performance Timeline.
-									If name is provided, removes only objects whose performanceEntry.name matches name.</p>
+									<p>eventLoopUtilization is similar to CPU utilization except that it is calculated using high precision wall-clock time.
+										It represents the percentage of time the event loop has spent outside the event loop&#39;s event provider (e.g. epoll_wait).
+									No other CPU idle time is taken into consideration.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-					<a name="getentries" class="tsd-anchor"></a>
-					<h3>get<wbr>Entries</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Entries<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_perf_hooks_.performanceentry.html" class="tsd-signature-type">PerformanceEntry</a><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:127</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns a list of all PerformanceEntry objects in chronological order with respect to performanceEntry.startTime.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <a href="_perf_hooks_.performanceentry.html" class="tsd-signature-type">PerformanceEntry</a><span class="tsd-signature-symbol">[]</span></h4>
-							<p>list of all PerformanceEntry objects</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-					<a name="getentriesbyname" class="tsd-anchor"></a>
-					<h3>get<wbr>Entries<wbr>ByName</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Entries<wbr>ByName<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_perf_hooks_.performanceentry.html" class="tsd-signature-type">PerformanceEntry</a><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:136</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns a list of all PerformanceEntry objects in chronological order with respect to performanceEntry.startTime
-									whose performanceEntry.name is equal to name, and optionally, whose performanceEntry.entryType is equal to type.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> util1: <a href="_perf_hooks_.eventlooputilization.html" class="tsd-signature-type">EventLoopUtilization</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The result of a previous call to eventLoopUtilization()</p>
+									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> util2: <a href="_perf_hooks_.eventlooputilization.html" class="tsd-signature-type">EventLoopUtilization</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The result of a previous call to eventLoopUtilization() prior to util1</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_perf_hooks_.performanceentry.html" class="tsd-signature-type">PerformanceEntry</a><span class="tsd-signature-symbol">[]</span></h4>
-							<p>list of all PerformanceEntry objects</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-					<a name="getentriesbytype" class="tsd-anchor"></a>
-					<h3>get<wbr>Entries<wbr>ByType</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Entries<wbr>ByType<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_perf_hooks_.performanceentry.html" class="tsd-signature-type">PerformanceEntry</a><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:144</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns a list of all PerformanceEntry objects in chronological order with respect to performanceEntry.startTime
-									whose performanceEntry.entryType is equal to type.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>type: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_perf_hooks_.performanceentry.html" class="tsd-signature-type">PerformanceEntry</a><span class="tsd-signature-symbol">[]</span></h4>
-							<p>list of all PerformanceEntry objects</p>
+							<h4 class="tsd-returns-title">Returns <a href="_perf_hooks_.eventlooputilization.html" class="tsd-signature-type">EventLoopUtilization</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -326,7 +215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:153</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:102</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -359,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:170</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:119</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -402,7 +291,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:180</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:129</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -422,7 +311,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:192</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:141</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -457,10 +346,10 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="../modules/_perf_hooks_.html">&quot;perf_<wbr>hooks&quot;</a>
 						<ul>
-							<li class=" tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external">
+							<li class=" tsd-kind-namespace tsd-parent-kind-module tsd-is-external">
 								<a href="../modules/_perf_hooks_.constants.html">constants</a>
 							</li>
 						</ul>
@@ -486,6 +375,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

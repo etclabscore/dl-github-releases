@@ -94,13 +94,13 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#asyncid" class="tsd-kind-icon">async<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#bind" class="tsd-kind-icon">bind</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#emitafter" class="tsd-kind-icon">emit<wbr>After</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#emitbefore" class="tsd-kind-icon">emit<wbr>Before</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#emitdestroy" class="tsd-kind-icon">emit<wbr>Destroy</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#observe" class="tsd-kind-icon">observe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#runinasyncscope" class="tsd-kind-icon">run<wbr>InAsync<wbr>Scope</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#triggerasyncid" class="tsd-kind-icon">trigger<wbr>Async<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static tsd-is-external"><a href="_perf_hooks_.performanceobserver.html#bind-1" class="tsd-kind-icon">bind</a></li>
 							</ul>
 						</section>
 					</div>
@@ -119,7 +119,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:216</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:175</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -146,13 +146,51 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#asyncid">asyncId</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/node/async_hooks.d.ts:137</li>
+									<li>Defined in node_modules/@types/node/async_hooks.d.ts:152</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 							<p>the unique ID assigned to this AsyncResource instance.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-external">
+					<a name="bind" class="tsd-anchor"></a>
+					<h3>bind</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">bind&lt;Func&gt;<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Func</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Func</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>asyncResource<span class="tsd-signature-symbol">: </span><a href="_async_hooks_.asyncresource.html" class="tsd-signature-type">AsyncResource</a><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#bind-1">bind</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/node/async_hooks.d.ts:129</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Binds the given function to execute to this <code>AsyncResource</code>&#39;s scope.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>Func<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fn: <span class="tsd-signature-type">Func</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function to bind to the current <code>AsyncResource</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Func</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>asyncResource<span class="tsd-signature-symbol">: </span><a href="_async_hooks_.asyncresource.html" class="tsd-signature-type">AsyncResource</a><span class="tsd-signature-symbol"> }</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -166,69 +204,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:222</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:181</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Disconnects the PerformanceObserver instance from all notifications.</p>
 								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-					<a name="emitafter" class="tsd-anchor"></a>
-					<h3>emit<wbr>After</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>After<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#emitafter">emitAfter</a></p>
-								<ul>
-									<li>Defined in node_modules/@types/node/async_hooks.d.ts:114</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Call AsyncHooks after callbacks.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>deprecated</dt>
-									<dd><p>since 9.6 - Use asyncResource.runInAsyncScope() instead.</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-					<a name="emitbefore" class="tsd-anchor"></a>
-					<h3>emit<wbr>Before</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Before<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#emitbefore">emitBefore</a></p>
-								<ul>
-									<li>Defined in node_modules/@types/node/async_hooks.d.ts:108</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Call AsyncHooks before callbacks.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>deprecated</dt>
-									<dd><p>since 9.6 - Use asyncResource.runInAsyncScope() instead.</p>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -245,7 +227,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#emitdestroy">emitDestroy</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/node/async_hooks.d.ts:132</li>
+									<li>Defined in node_modules/@types/node/async_hooks.d.ts:147</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -261,13 +243,13 @@
 					<a name="observe" class="tsd-anchor"></a>
 					<h3>observe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">observe<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>buffered<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>entryTypes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">observe<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>buffered<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>entryTypes<span class="tsd-signature-symbol">: </span><a href="../modules/_perf_hooks_.html#entrytype" class="tsd-signature-type">EntryType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:230</li>
+									<li>Defined in node_modules/@types/node/perf_hooks.d.ts:189</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -280,7 +262,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <span class="tsd-signature-symbol">{ </span>buffered<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>entryTypes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>buffered<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>entryTypes<span class="tsd-signature-symbol">: </span><a href="../modules/_perf_hooks_.html#entrytype" class="tsd-signature-type">EntryType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 									<ul class="tsd-parameters">
@@ -288,7 +270,7 @@
 											<h5><span class="tsd-flag ts-flagOptional">Optional</span> buffered<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 										</li>
 										<li class="tsd-parameter">
-											<h5>entry<wbr>Types<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+											<h5>entry<wbr>Types<span class="tsd-signature-symbol">: </span><a href="../modules/_perf_hooks_.html#entrytype" class="tsd-signature-type">EntryType</a><span class="tsd-signature-symbol">[]</span></h5>
 										</li>
 									</ul>
 								</li>
@@ -308,7 +290,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#runinasyncscope">runInAsyncScope</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/node/async_hooks.d.ts:127</li>
+									<li>Defined in node_modules/@types/node/async_hooks.d.ts:142</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -387,13 +369,57 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#triggerasyncid">triggerAsyncId</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/node/async_hooks.d.ts:142</li>
+									<li>Defined in node_modules/@types/node/async_hooks.d.ts:157</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 							<p>the trigger ID for this AsyncResource instance.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static tsd-is-external">
+					<a name="bind-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> bind</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">bind&lt;Func&gt;<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Func</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Func</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>asyncResource<span class="tsd-signature-symbol">: </span><a href="_async_hooks_.asyncresource.html" class="tsd-signature-type">AsyncResource</a><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_async_hooks_.asyncresource.html">AsyncResource</a>.<a href="_async_hooks_.asyncresource.html#bind-1">bind</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/node/async_hooks.d.ts:123</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Binds the given function to the current execution context.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>Func<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fn: <span class="tsd-signature-type">Func</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function to bind to the current execution context.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An optional name to associate with the underlying <code>AsyncResource</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Func</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>asyncResource<span class="tsd-signature-symbol">: </span><a href="_async_hooks_.asyncresource.html" class="tsd-signature-type">AsyncResource</a><span class="tsd-signature-symbol"> }</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -405,10 +431,10 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="../modules/_perf_hooks_.html">&quot;perf_<wbr>hooks&quot;</a>
 						<ul>
-							<li class=" tsd-kind-namespace tsd-parent-kind-namespace tsd-is-external">
+							<li class=" tsd-kind-namespace tsd-parent-kind-module tsd-is-external">
 								<a href="../modules/_perf_hooks_.constants.html">constants</a>
 							</li>
 						</ul>
@@ -434,6 +460,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

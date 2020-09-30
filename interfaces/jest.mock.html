@@ -71,10 +71,10 @@
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>T</h4>
+						<h4>T = <span class="tsd-signature-type">any</span></h4>
 					</li>
 					<li>
-						<h4>Y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+						<h4>Y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span> = <span class="tsd-signature-type">any</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -103,7 +103,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in node_modules/@types/jest/index.d.ts:1082</li>
+								<li>Defined in node_modules/@types/jest/index.d.ts:1088</li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -145,6 +145,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="jest.mock.html#apply" class="tsd-kind-icon">apply</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="jest.mock.html#bind" class="tsd-kind-icon">bind</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="jest.mock.html#call" class="tsd-kind-icon">call</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="jest.mock.html#getmockimplementation" class="tsd-kind-icon">get<wbr>Mock<wbr>Implementation</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="jest.mock.html#getmockname" class="tsd-kind-icon">get<wbr>Mock<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="jest.mock.html#mockclear" class="tsd-kind-icon">mock<wbr>Clear</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external"><a href="jest.mock.html#mockimplementation" class="tsd-kind-icon">mock<wbr>Implementation</a></li>
@@ -177,7 +178,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1081</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1087</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -227,7 +228,7 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 					<a name="length" class="tsd-anchor"></a>
-					<h3>length</h3>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> length</h3>
 					<div class="tsd-signature tsd-kind-icon">length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="function.html">Function</a>.<a href="function.html#length">length</a></p>
@@ -243,7 +244,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mock">mock</a></p>
 						<ul>
-							<li>Defined in node_modules/@types/jest/index.d.ts:1146</li>
+							<li>Defined in node_modules/@types/jest/index.d.ts:1157</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -254,7 +255,7 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="callablefunction.html">CallableFunction</a>.<a href="callablefunction.html#name">name</a></p>
@@ -439,6 +440,47 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+					<a name="getmockimplementation" class="tsd-anchor"></a>
+					<h3>get<wbr>Mock<wbr>Implementation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Mock<wbr>Implementation<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Y</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#getmockimplementation">getMockImplementation</a></p>
+								<ul>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1193</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the function that was set as the implementation of the mock (using mockImplementation).</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Y</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-signature">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Y</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">Y</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 					<a name="getmockname" class="tsd-anchor"></a>
 					<h3>get<wbr>Mock<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
@@ -449,7 +491,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#getmockname">getMockName</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1144</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1155</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -465,14 +507,14 @@
 					<a name="mockclear" class="tsd-anchor"></a>
 					<h3>mock<wbr>Clear</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">mock<wbr>Clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">mock<wbr>Clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockclear">mockClear</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1156</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1167</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -484,7 +526,7 @@
 									You should therefore avoid assigning mockFn.mock to other variables, temporary or not, to make sure you
 								don&#39;t access stale data.</p>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -499,7 +541,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockimplementation">mockImplementation</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1186</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1201</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -531,7 +573,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockimplementationonce">mockImplementationOnce</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1202</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1217</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -589,7 +631,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockname">mockName</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1204</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1219</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -618,7 +660,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockrejectedvalue">mockRejectedValue</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1279</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1294</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -655,7 +697,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockrejectedvalueonce">mockRejectedValueOnce</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1297</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1312</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -689,14 +731,14 @@
 					<a name="mockreset" class="tsd-anchor"></a>
 					<h3>mock<wbr>Reset</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">mock<wbr>Reset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">mock<wbr>Reset<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockreset">mockReset</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1166</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1177</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -708,7 +750,7 @@
 									You should therefore avoid assigning mockFn.mock to other variables, temporary or not, to make sure you
 								don&#39;t access stale data.</p>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -723,7 +765,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockresolvedvalue">mockResolvedValue</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1247</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1262</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -752,7 +794,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockresolvedvalueonce">mockResolvedValueOnce</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1267</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1282</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -796,7 +838,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockrestore">mockRestore</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1178</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1189</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -824,7 +866,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockreturnthis">mockReturnThis</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1214</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1229</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -854,7 +896,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockreturnvalue">mockReturnValue</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1226</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1241</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -892,7 +934,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="jest.mock.html">Mock</a>.<a href="jest.mock.html#mockreturnvalueonce">mockReturnValueOnce</a></p>
 								<ul>
-									<li>Defined in node_modules/@types/jest/index.d.ts:1243</li>
+									<li>Defined in node_modules/@types/jest/index.d.ts:1258</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1002,6 +1044,9 @@
 								<a href="jest.mock.html#call" class="tsd-kind-icon">call</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
+								<a href="jest.mock.html#getmockimplementation" class="tsd-kind-icon">get<wbr>Mock<wbr>Implementation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
 								<a href="jest.mock.html#getmockname" class="tsd-kind-icon">get<wbr>Mock<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited tsd-is-external">
@@ -1067,6 +1112,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

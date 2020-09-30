@@ -91,6 +91,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.agentoptions.html#keepalivemsecs" class="tsd-kind-icon">keep<wbr>Alive<wbr>Msecs</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.agentoptions.html#maxfreesockets" class="tsd-kind-icon">max<wbr>Free<wbr>Sockets</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.agentoptions.html#maxsockets" class="tsd-kind-icon">max<wbr>Sockets</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.agentoptions.html#maxtotalsockets" class="tsd-kind-icon">max<wbr>Total<wbr>Sockets</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.agentoptions.html#scheduling" class="tsd-kind-icon">scheduling</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_http_.agentoptions.html#timeout" class="tsd-kind-icon">timeout</a></li>
 							</ul>
 						</section>
@@ -105,7 +107,7 @@
 					<div class="tsd-signature tsd-kind-icon">keep<wbr>Alive<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/http.d.ts:214</li>
+							<li>Defined in node_modules/@types/node/http.d.ts:344</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -120,7 +122,7 @@
 					<div class="tsd-signature tsd-kind-icon">keep<wbr>Alive<wbr>Msecs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/http.d.ts:219</li>
+							<li>Defined in node_modules/@types/node/http.d.ts:349</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -136,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Free<wbr>Sockets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/http.d.ts:227</li>
+							<li>Defined in node_modules/@types/node/http.d.ts:361</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -151,7 +153,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Sockets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/http.d.ts:223</li>
+							<li>Defined in node_modules/@types/node/http.d.ts:353</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -161,12 +163,42 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="maxtotalsockets" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Total<wbr>Sockets</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Total<wbr>Sockets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/http.d.ts:357</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Maximum number of sockets allowed for all hosts in total. Each request will use a new socket until the maximum is reached. Default: Infinity.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="scheduling" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> scheduling</h3>
+					<div class="tsd-signature tsd-kind-icon">scheduling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"fifo"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lifo"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in node_modules/@types/node/http.d.ts:369</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Scheduling strategy to apply when picking the next free socket to use. Default: &#39;fifo&#39;.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="timeout" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> timeout</h3>
 					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in node_modules/@types/node/http.d.ts:231</li>
+							<li>Defined in node_modules/@types/node/http.d.ts:365</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -183,7 +215,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="../modules/_http_.html">&quot;http&quot;</a>
 					</li>
 				</ul>
@@ -207,6 +239,5 @@
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

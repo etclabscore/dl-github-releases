@@ -65,6 +65,15 @@
 				<a href="#dl-github-releases" id="dl-github-releases" style="color: inherit; text-decoration: none;">
 					<h1>DL Github Releases</h1>
 				</a>
+				<center>
+					<span>
+						<img alt="CircleCI branch" src="https://img.shields.io/circleci/project/github/etclabscore/dl-github-releases/master.svg">
+						<img alt="Dependabot status" src="https://api.dependabot.com/badges/status?host=github&repo=etclabscore/dl-github-releases" />
+						<img alt="npm" src="https://img.shields.io/npm/dt/@etclabscore/dl-github-releases.svg" />
+						<img alt="GitHub release" src="https://img.shields.io/github/release/etclabscore/dl-github-releases.svg" />
+						<img alt="GitHub commits since latest release" src="https://img.shields.io/github/commits-since/etclabscore/dl-github-releases/latest.svg" />
+					</span>
+				</center>
 				<p>A node module to download Github assets for Github releases. It will also uncompress zip files.</p>
 				<a href="#command-line" id="command-line" style="color: inherit; text-decoration: none;">
 					<h2>Command line</h2>
@@ -78,11 +87,11 @@ $ dl-github-releases <span class="hljs-comment">--help</span>
 
 Options:
   -V, <span class="hljs-comment">--version                      output the version number</span>
-  -o, <span class="hljs-comment">--outputDir [output]           output directory [output] (default: "/Users/zb/Code/etclabs/dl-github-releases")</span>
+  -o, <span class="hljs-comment">--outputDir [output]           output directory [output] (default: &quot;/Users/zb/Code/etclabs/dl-github-releases&quot;)</span>
   -p, <span class="hljs-comment">--includePre                   download prerelease</span>
   -d, <span class="hljs-comment">--includeDraft                 download draft releases</span>
   -a, <span class="hljs-comment">--filterAssetsByName &lt;rexexp&gt;  filter assets name</span>
-  -z, <span class="hljs-comment">--zipped                       don't extract zip files</span>
+  -z, <span class="hljs-comment">--zipped                       don&#x27;t extract zip files</span>
   -h, <span class="hljs-comment">--help                         output usage information</span>
 <span class="hljs-keyword">Usage</span>: download-github-<span class="hljs-keyword">release</span> [options] &lt;<span class="hljs-keyword">user</span>&gt; &lt;repo&gt; [outputdir]
 
@@ -109,11 +118,11 @@ spec.pdf                 ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h3>Usage</h3>
 				</a>
-				<pre><code class="language-javascript"><span class="hljs-keyword">var</span> downloadReleases = <span class="hljs-built_in">require</span>(<span class="hljs-string">'dl-github-releases'</span>);
+				<pre><code class="language-javascript"><span class="hljs-keyword">var</span> downloadReleases = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;dl-github-releases&#x27;</span>);
 
-<span class="hljs-keyword">var</span> user = <span class="hljs-string">'some user'</span>;
-<span class="hljs-keyword">var</span> repo = <span class="hljs-string">'some repo'</span>;
-<span class="hljs-keyword">var</span> outputdir = <span class="hljs-string">'some output directory'</span>;
+<span class="hljs-keyword">var</span> user = <span class="hljs-string">&#x27;some user&#x27;</span>;
+<span class="hljs-keyword">var</span> repo = <span class="hljs-string">&#x27;some repo&#x27;</span>;
+<span class="hljs-keyword">var</span> outputdir = <span class="hljs-string">&#x27;some output directory&#x27;</span>;
 
 <span class="hljs-comment">// Define a function to filter releases.</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterRelease</span>(<span class="hljs-params">release</span>) </span>{
@@ -123,13 +132,13 @@ spec.pdf                 ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 
 <span class="hljs-comment">// Define a function to filter assets.</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterAsset</span>(<span class="hljs-params">asset</span>) </span>{
-  <span class="hljs-comment">// Select assets that contain the string 'windows'.</span>
-  <span class="hljs-keyword">return</span> asset.name.indexOf(<span class="hljs-string">'windows'</span>) &gt;= <span class="hljs-number">0</span>;
+  <span class="hljs-comment">// Select assets that contain the string &#x27;windows&#x27;.</span>
+  <span class="hljs-keyword">return</span> asset.name.indexOf(<span class="hljs-string">&#x27;windows&#x27;</span>) &gt;= <span class="hljs-number">0</span>;
 }
 
 downloadReleases(user, repo, outputdir, filterRelease, filterAsset)
   .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'All done!'</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;All done!&#x27;</span>);
   })
   .catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
     <span class="hljs-built_in">console</span>.error(err.message);
@@ -145,121 +154,127 @@ downloadReleases(user, repo, outputdir, filterRelease, filterAsset)
 					<li class="label tsd-is-external">
 						<span>Externals</span>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
-						<a href="modules/____index_.html">&quot;../index&quot;</a>
-					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_assert_.html">&quot;assert&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_async_hooks_.html">&quot;async_<wbr>hooks&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_buffer_.html">&quot;buffer&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_child_process_.html">&quot;child_<wbr>process&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_cluster_.html">&quot;cluster&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_console_.html">&quot;console&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_constants_.html">&quot;constants&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_crypto_.html">&quot;crypto&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_dgram_.html">&quot;dgram&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_dns_.html">&quot;dns&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_domain_.html">&quot;domain&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_events_.html">&quot;events&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_fs_.html">&quot;fs&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_http_.html">&quot;http&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_http2_.html">&quot;http2&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_https_.html">&quot;https&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_inspector_.html">&quot;inspector&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_module_.html">&quot;module&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_net_.html">&quot;net&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_os_.html">&quot;os&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_path_.html">&quot;path&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_perf_hooks_.html">&quot;perf_<wbr>hooks&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_process_.html">&quot;process&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/_promises_.html">&quot;promises&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_punycode_.html">&quot;punycode&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_querystring_.html">&quot;querystring&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_readline_.html">&quot;readline&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_repl_.html">&quot;repl&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_stream_.html">&quot;stream&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_string_decoder_.html">&quot;string_<wbr>decoder&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_timers_.html">&quot;timers&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_tls_.html">&quot;tls&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_trace_events_.html">&quot;trace_<wbr>events&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_tty_.html">&quot;tty&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_url_.html">&quot;url&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_util_.html">&quot;util&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_v8_.html">&quot;v8&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_vm_.html">&quot;vm&quot;</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/_wasi_.html">&quot;wasi&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="modules/_worker_threads_.html">&quot;worker_<wbr>threads&quot;</a>
 					</li>
 					<li class=" tsd-kind-namespace tsd-is-external">
@@ -278,7 +293,7 @@ downloadReleases(user, repo, outputdir, filterRelease, filterAsset)
 						<a href="modules/__global.html">__global</a>
 					</li>
 					<li class=" tsd-kind-namespace tsd-is-external">
-						<a href="modules/diff.html">diff</a>
+						<a href="modules/doc.html">doc</a>
 					</li>
 					<li class=" tsd-kind-namespace tsd-is-external">
 						<a href="modules/extract.html">extract</a>
@@ -287,16 +302,37 @@ downloadReleases(user, repo, outputdir, filterRelease, filterAsset)
 						<a href="modules/fetch.html">fetch</a>
 					</li>
 					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/getfileinfo.html">get<wbr>File<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
 						<a href="modules/jasmine.html">jasmine</a>
 					</li>
 					<li class=" tsd-kind-namespace tsd-is-external">
 						<a href="modules/jest.html">jest</a>
 					</li>
 					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/normalize.html">normalize</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/prettyformat.html">pretty<wbr>Format</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/resolveconfig.html">resolve<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/resolveconfigfile.html">resolve<wbr>Config<wbr>File</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
 						<a href="modules/setimmediate.html">set<wbr>Immediate</a>
 					</li>
 					<li class=" tsd-kind-namespace tsd-is-external">
 						<a href="modules/settimeout.html">set<wbr>Timeout</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/util.html">util</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/visitors.html">visitors</a>
 					</li>
 					<li class=" tsd-kind-namespace tsd-is-external">
 						<a href="modules/yargs.html">yargs</a>
@@ -331,6 +367,5 @@ downloadReleases(user, repo, outputdir, filterRelease, filterAsset)
 </footer>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
