@@ -52,7 +52,7 @@ spec.pdf                 ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 ### Installation
 
 ```bash
-npm install --save dl-github-releases
+npm install --save @etclabscore/dl-github-releases
 ```
 
 ### Usage
