@@ -52,13 +52,13 @@ spec.pdf                 ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 ### Installation
 
 ```bash
-npm install --save dl-github-releases
+npm install --save @etclabscore/dl-github-releases
 ```
 
 ### Usage
 
 ```javascript
-var downloadReleases = require('dl-github-releases');
+var downloadReleases = require('@etclabscore/dl-github-releases');
 
 var user = 'some user';
 var repo = 'some repo';
